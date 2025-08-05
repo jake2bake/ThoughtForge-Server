@@ -1,0 +1,17 @@
+[
+  {
+    "model": "thoughtsapi.topic",
+    "pk": 1,
+    "fields": { "label": "Metaphysics" }
+  },
+  {
+    "model": "thoughtsapi.topic",
+    "pk": 2,
+    "fields": { "label": "Ethics" }
+  },
+  {
+    "model": "thoughtsapi.topic",
+    "pk": 3,
+    "fields": { "label": "Political Philosophy" }
+  }
+]

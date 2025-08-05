@@ -1,0 +1,41 @@
+[
+  {
+    "model": "thoughtsapi.submission",
+    "pk": 1,
+    "fields": {
+      "reading": 1,
+      "user": 2,
+      "title": "God's Existence: A Reflection",
+      "reflection": "I found the Five Ways both profound and challenging. The idea of pure actuality blew my mind.",
+      "submitted_at": "2025-08-10T10:00:00Z",
+      "grade": "A",
+      "feedback": "Excellent insight and clarity."
+    }
+  },
+  {
+    "model": "thoughtsapi.submission",
+    "pk": 2,
+    "fields": {
+      "reading": 2,
+      "user": 3,
+      "title": "Work and Human Dignity",
+      "reflection": "Rerum Novarum shows how Church teaching uplifts laborers. A prophetic document.",
+      "submitted_at": "2025-08-12T14:00:00Z",
+      "grade": "B+",
+      "feedback": "Solid but elaborate more next time."
+    }
+  },
+  {
+    "model": "thoughtsapi.submission",
+    "pk": 3,
+    "fields": {
+      "reading": 3,
+      "user": 3,
+      "title": "Body and Sacramentality",
+      "reflection": "The body expresses the person. I never thought about the human form as a sign of divine love.",
+      "submitted_at": "2025-08-13T15:30:00Z",
+      "grade": "A-",
+      "feedback": "Deeply personal and theological. Well done."
+    }
+  }
+]

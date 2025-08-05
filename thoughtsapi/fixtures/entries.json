@@ -1,0 +1,41 @@
+[
+  {
+    "model": "thoughtsapi.entry",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "title": "On Being and Essence",
+      "reflection": "Aquinas makes a crucial distinction between essence and existence...",
+      "created_at": "2025-07-25T12:00:00Z",
+      "updated_at": "2025-07-25T12:00:00Z",
+      "isPrivate": false,
+      "topic": 1
+    }
+  },
+  {
+    "model": "thoughtsapi.entry",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "title": "The Just War Tradition",
+      "reflection": "Drawing on Augustine and Aquinas, I’ve come to see just war as a moral discipline...",
+      "created_at": "2025-07-26T13:00:00Z",
+      "updated_at": "2025-07-26T13:00:00Z",
+      "isPrivate": true,
+      "topic": 2
+    }
+  },
+  {
+    "model": "thoughtsapi.entry",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "title": "Natural Law and Modern Democracy",
+      "reflection": "The natural law tradition holds that moral truth is accessible to reason...",
+      "created_at": "2025-07-27T14:00:00Z",
+      "updated_at": "2025-07-27T14:00:00Z",
+      "isPrivate": false,
+      "topic": 3
+    }
+  }
+]

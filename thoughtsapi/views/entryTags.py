@@ -1,7 +1,7 @@
 from rest_framework import viewsets, status, serializers
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from thoughtsapi.models import EntryTag, Entry, Tag
+from thoughtsapi.models import EntryTag
 
 class EntryTagSerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,0 +1,26 @@
+[
+  {
+    "model": "thoughtsapi.entryTag",
+    "pk": 1,
+    "fields": {
+      "entry": 1,
+      "tag": 1
+    }
+  },
+  {
+    "model": "thoughtsapi.entryTag",
+    "pk": 2,
+    "fields": {
+      "entry": 2,
+      "tag": 2
+    }
+  },
+  {
+    "model": "thoughtsapi.entryTag",
+    "pk": 3,
+    "fields": {
+      "entry": 3,
+      "tag": 3
+    }
+  }
+]
