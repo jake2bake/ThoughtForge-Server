@@ -1,0 +1,32 @@
+[
+  {
+    "model": "thoughtsapi.readingassignment",
+    "pk": 1,
+    "fields": {
+      "course": 1,
+      "title": "Reading Aquinas",
+      "content": "Read ST I q.2 a.3.",
+      "due_date": "2025-08-15"
+    }
+  },
+  {
+    "model": "thoughtsapi.readingassignment",
+    "pk": 2,
+    "fields": {
+      "course": 2,
+      "title": "Read Rerum Novarum",
+      "content": "Reflect on its relevance today.",
+      "due_date": "2025-08-18"
+    }
+  },
+  {
+    "model": "thoughtsapi.readingassignment",
+    "pk": 3,
+    "fields": {
+      "course": 3,
+      "title": "Intro to TOB",
+      "content": "Pages 1–25 of TOB reader.",
+      "due_date": "2025-08-20"
+    }
+  }
+]

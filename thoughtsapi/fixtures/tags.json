@@ -1,0 +1,5 @@
+[
+  { "model": "thoughtsapi.tag", "pk": 1, "fields": { "name": "Aquinas" } },
+  { "model": "thoughtsapi.tag", "pk": 2, "fields": { "name": "Augustine" } },
+  { "model": "thoughtsapi.tag", "pk": 3, "fields": { "name": "Natural Law" } }
+]

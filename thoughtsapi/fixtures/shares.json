@@ -1,0 +1,38 @@
+[
+  {
+    "model": "thoughtsapi.share",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "shared_to": 3,
+      "entry": 1,
+      "reading": null,
+      "course": null,
+      "created_at": "2025-08-13T14:30:00Z"
+    }
+  },
+  {
+    "model": "thoughtsapi.share",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "shared_to": 2,
+      "entry": null,
+      "reading": 2,
+      "course": null,
+      "created_at": "2025-08-12T14:06:00Z" 
+    }
+  },
+  {
+    "model": "thoughtsapi.share",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "shared_to": 1,
+      "entry": null,
+      "reading": null,
+      "course": 3,
+      "created_at": "2025-08-17T14:00:00Z"
+    }
+  }
+]

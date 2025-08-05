@@ -1,0 +1,47 @@
+[
+    {
+        "model": "thoughtsapi.user",
+        "pk": 1,
+        "fields": {
+            "username": "jake",
+            "email": "jake@nss.com",
+            "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
+            "role": "student",
+            "about_me": "Software programming Thomist"
+        }
+    },
+    {
+    "model": "thoughtsapi.user",
+    "pk": 2,
+    "fields": {
+      "username": "anna",
+      "email": "anna@faithfulmail.com",
+      "password": "pbkdf2_sha256$150000$uOiKN2YbM3df$7nUyHFeGwZ28bChgWj+g/1PS9MkChnpi8zBtBzCkGGw=",
+      "role": "mentor",
+      "about_me": "Catholic teacher and spiritual director"
+    }
+  },
+  {
+    "model": "thoughtsapi.user",
+    "pk": 3,
+    "fields": {
+      "username": "benedict",
+      "email": "benedict@scholastica.org",
+      "password": "pbkdf2_sha256$150000$LnhDPmjCEUDq$xOe1N1XUN1iFeUUEgYwctF6W1GJsz4U3T89PkW2oXfU=",
+      "role": "student",
+      "about_me": "Philosophy student studying Thomism and politics"
+    }
+  },
+  {
+    "model": "thoughtsapi.user",
+    "pk": 4,
+    "fields": {
+      "username": "sophia",
+      "email": "sophia@angelicum.edu",
+      "password": "pbkdf2_sha256$150000$AdG5SkB2ZPQl$azqJTh7v9DqZ1o95HdF1XP+dPv2cfboTbAAYkXAHhAY=",
+      "role": "student",
+      "about_me": "Dominican laywoman interested in liturgy and doctrine"
+    }
+  }
+   
+]
