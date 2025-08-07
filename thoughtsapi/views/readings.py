@@ -3,9 +3,18 @@
 from rest_framework import viewsets, serializers
 from rest_framework.response import Response
 from rest_framework import status
-from thoughtsapi.models import Reading
+from thoughtsapi.models import Reading, Topic
+
+
+class TopicSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Topic
+        fields = ['id', 'label']
+
 
 class ReadingSerializer(serializers.ModelSerializer):
+    topic = TopicSerializer(read_only=True)
+
     class Meta:
         model = Reading
         fields = '__all__'

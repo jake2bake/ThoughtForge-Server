@@ -1,11 +1,21 @@
-from rest_framework import serializers
+from rest_framework import serializers, status
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+
 from thoughtsapi.models import User
 
+
+# -----------------------------
+# User Serializer
+# -----------------------------
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'about_me', 'role', 'password']
-        extra_kwargs = {'password': {'write_only': True}}
+        extra_kwargs = {
+            'password': {'write_only': True}  # Password won't be included in GET responses
+        }
 
     def create(self, validated_data):
         user = User.objects.create_user(
@@ -16,3 +26,13 @@ class UserSerializer(serializers.ModelSerializer):
             role=validated_data.get('role', "user")
         )
         return user
+
+
+# -----------------------------
+# Profile View (GET /profile/)
+# -----------------------------
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def profile_view(request):
+    serializer = UserSerializer(request.user)
+    return Response(serializer.data, status=status.HTTP_200_OK)
