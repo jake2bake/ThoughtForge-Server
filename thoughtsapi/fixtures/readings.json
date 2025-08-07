@@ -7,7 +7,8 @@
       "url": "https://classics.mit.edu/Aristotle/soul.html",
       "content": "The soul is the cause or source of the living body. That it is a cause in all three senses which we distinguish—the source of motion, the end, and the essence.",
       "author": "Aristotle",
-      "topic": 1
+      "topic": 1,
+      "course": 3
     }
   },
   {
@@ -18,7 +19,8 @@
       "url": "https://www.augustine.com/links/confessions/",
       "content": "Great are You, O Lord, and greatly to be praised; great is Your power, and of Your wisdom there is no end. And man, being a part of Your creation, desires to praise You.",
       "author": "St. Augustine",
-      "topic": 2
+      "topic": 2,
+      "course": 2
     }
   },
   {
@@ -29,7 +31,8 @@
       "url": "https://www.newadvent.org/summa/1002.htm",
       "content": "To prove the existence of God by way of motion: It is certain, and evident to our senses, that in the world some things are in motion. Whatever is moved is moved by another...",
       "author": "St. Thomas Aquinas",
-      "topic": 2
+      "topic": 2,
+      "course": 1
     }
   },
   {
@@ -40,7 +43,8 @@
       "url": null,
       "content": "The Aristotelian proof proceeds from the reality of change in the world to the existence of a purely actual actualizer. That which changes must be changed by another...",
       "author": "Edward Feser",
-      "topic": 2
+      "topic": 2,
+      "course": 1
     }
   },
   {
@@ -51,7 +55,8 @@
       "url": "https://plato.stanford.edu/entries/plato-ethics-politics/#Rep",
       "content": "Behold! human beings living in a underground den, which has a mouth open towards the light... they see only their own shadows, or the shadows of one another...",
       "author": "Plato",
-      "topic": 1
+      "topic": 1,
+      "course": 2
     }
   },
   {
@@ -62,7 +67,8 @@
       "url": "https://www.gutenberg.org/ebooks/14328",
       "content": "While I was silently pondering these things to myself and writing down my lamentations, I saw a woman standing over my head. Her eyes were full of fire, her presence full of authority...",
       "author": "Boethius",
-      "topic": 3
+      "topic": 3,
+      "course": 3
     }
   }
 ]

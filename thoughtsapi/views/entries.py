@@ -4,6 +4,7 @@ from rest_framework import serializers, status
 from django.http import HttpResponseServerError
 from thoughtsapi.models import Entry
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.decorators import action  # <-- Add this import
 
 class EntrySerializer(serializers.ModelSerializer):
     class Meta:
@@ -59,3 +60,10 @@ class Entries(ViewSet):
             return Response({'message': 'Entry not found'}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=False, methods=['get'], url_path='myentries')
+    def my_entries(self, request):
+        user = request.auth.user
+        entries = Entry.objects.filter(user=user)
+        serializer = EntrySerializer(entries, many=True, context={'request': request})
+        return Response(serializer.data)
