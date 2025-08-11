@@ -3,6 +3,7 @@ from django.urls import include, path
 from rest_framework import routers
 from thoughtsapi.views.users import profile_view
 from thoughtsapi.views import *
+from thoughtsapi.views import gutendex_proxy
 
 
 
@@ -24,5 +25,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register/', RegisterView.as_view(), name='register'),
     path('login', login_user, name='login'),
-    path("profile/", profile_view, name='profile')
+    path("profile/", profile_view, name='profile'),
+    path('gutendex/books/<int:gutenberg_id>/', gutendex_proxy, name='gutendex-proxy'),
+    path('gutdendex/search/', gutendex_search, name='gutendex-search')
 ]
