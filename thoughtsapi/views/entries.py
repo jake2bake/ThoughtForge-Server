@@ -4,7 +4,8 @@ from rest_framework import serializers, status
 from django.http import HttpResponseServerError
 from thoughtsapi.models import Entry
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rest_framework.decorators import action  # <-- Add this import
+from rest_framework.decorators import action  
+from django.db.models import Q
 
 class EntrySerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,7 +17,16 @@ class Entries(ViewSet):
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def list(self, request):
-        entries = Entry.objects.all()
+        user = request.user
+        print("user in list:", user)
+        if user and user.is_authenticated:
+            entries = Entry.objects.filter(
+                Q(isPrivate=False) | Q(user=user)
+            )
+        else: entries = Entry.objects.filter(isPrivate=False)
+        print(f"User: {user}, entries count: {entries.count()}")
+        for e in entries:
+            print(f"Entry {e.id}: isPrivate={e.isPrivate}, user{e.user}")
         serializer = EntrySerializer(entries, many=True, context={'request': request})
         return Response(serializer.data)
 
