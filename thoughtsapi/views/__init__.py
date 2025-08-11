@@ -11,3 +11,4 @@ from thoughtsapi.views.courseEnrollments import CourseEnrollmentViewSet
 from thoughtsapi.views.submissions import SubmissionViewSet
 from thoughtsapi.views.likes import LikeViewSet
 from thoughtsapi.views.shares import ShareViewSet
+from thoughtsapi.views.gutendex import gutendex_proxy, gutendex_search
