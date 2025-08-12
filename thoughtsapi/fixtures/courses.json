@@ -5,7 +5,7 @@
     "fields": {
       "title": "Foundations of Philosophy",
       "description": "Introductory philosophical concepts rooted in realism.",
-      "mentor": 1,
+      "mentor": 2,
       "created_at": "2025-09-12T14:00:00Z"
 
     }
@@ -26,7 +26,7 @@
     "fields": {
       "title": "Theology of the Body",
       "description": "St. John Paul II's reflections on the human person.",
-      "mentor": 1,
+      "mentor": 2,
       "created_at": "2025-10-12T14:00:00Z"
     }
   }
