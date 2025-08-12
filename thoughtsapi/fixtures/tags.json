@@ -1,5 +1,19 @@
 [
-  { "model": "thoughtsapi.tag", "pk": 1, "fields": { "name": "Aquinas" } },
-  { "model": "thoughtsapi.tag", "pk": 2, "fields": { "name": "Augustine" } },
-  { "model": "thoughtsapi.tag", "pk": 3, "fields": { "name": "Natural Law" } }
+  { "model": "thoughtsapi.tag", "pk": 1, "fields": { "name": "Pre-Socratic" } },
+  { "model": "thoughtsapi.tag", "pk": 2, "fields": { "name": "Classical Greek" } },
+  { "model": "thoughtsapi.tag", "pk": 3, "fields": { "name": "Hellenistic" } },
+  { "model": "thoughtsapi.tag", "pk": 4, "fields": { "name": "Late Antiquity" } },
+  { "model": "thoughtsapi.tag", "pk": 5, "fields": { "name": "Medieval" } },
+  { "model": "thoughtsapi.tag", "pk": 6, "fields": { "name": "Scholastic" } },
+  { "model": "thoughtsapi.tag", "pk": 7, "fields": { "name": "Humanism" } },
+  { "model": "thoughtsapi.tag", "pk": 8, "fields": { "name": "Renaissance" } },
+  { "model": "thoughtsapi.tag", "pk": 9, "fields": { "name": "Empiricism" } },
+  { "model": "thoughtsapi.tag", "pk": 10, "fields": { "name": "Enlightenment" } },
+  { "model": "thoughtsapi.tag", "pk": 11, "fields": { "name": "Hellenistic" } },
+  { "model": "thoughtsapi.tag", "pk": 12, "fields": { "name": "Modernity" } },
+  { "model": "thoughtsapi.tag", "pk": 13, "fields": { "name": "Continental" } },
+  { "model": "thoughtsapi.tag", "pk": 14, "fields": { "name": "Analytic" } },
+  { "model": "thoughtsapi.tag", "pk": 15, "fields": { "name": "Phenomenology" } },
+  { "model": "thoughtsapi.tag", "pk": 16, "fields": { "name": "Existentialism" } },
+  { "model": "thoughtsapi.tag", "pk": 17, "fields": { "name": "Post-Modern" } }
 ]

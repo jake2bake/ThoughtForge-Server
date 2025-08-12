@@ -13,5 +13,21 @@
     "model": "thoughtsapi.topic",
     "pk": 3,
     "fields": { "label": "Political Philosophy" }
+  },
+  {
+    "model": "thoughtsapi.topic",
+    "pk": 4,
+    "fields": { "label": "Identity" }
+  },
+  {
+    "model": "thoughtsapi.topic",
+    "pk": 5,
+    "fields": { "label": "Sex and Gender" }
+  },
+  {
+    "model": "thoughtsapi.topic",
+    "pk": 6,
+    "fields": { "label": "Theology" }
   }
+
 ]
