@@ -19,6 +19,7 @@ router.register(r"courseEnrollments", CourseEnrollmentViewSet, 'courseEnrollment
 router.register(r"submissions", SubmissionViewSet, 'submission')
 router.register(r"likes", LikeViewSet, 'like')
 router.register(r'shares', ShareViewSet, 'share')
+router.register(r"users", UserViewSet, 'user')
 
 
 

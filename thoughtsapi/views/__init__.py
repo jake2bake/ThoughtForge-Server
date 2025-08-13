@@ -1,4 +1,4 @@
-from thoughtsapi.views.users import UserSerializer
+from thoughtsapi.views.users import UserSerializer, UserViewSet
 from thoughtsapi.views.register import RegisterView
 from thoughtsapi.views.login import login_user
 from thoughtsapi.views.entries import Entries
