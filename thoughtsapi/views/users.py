@@ -1,4 +1,4 @@
-from rest_framework import serializers, status
+from rest_framework import serializers, status, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -26,6 +26,13 @@ class UserSerializer(serializers.ModelSerializer):
             role=validated_data.get('role', "user")
         )
         return user
+
+class UserViewSet(viewsets.ViewSet):
+    def list(self, request):
+        users = User.objects.all()
+        serializer = UserSerializer(users, many=True)
+        return Response(serializer.data)
+
 
 
 # -----------------------------
