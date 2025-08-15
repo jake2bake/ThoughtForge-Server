@@ -1,9 +1,17 @@
 from rest_framework import viewsets, serializers, status
 from rest_framework.response import Response
-from thoughtsapi.models import Like
+from thoughtsapi.models import Like, Entry
+
+
+class EntrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Entry
+        fields = '__all__'
 
 # Serializer
 class LikeSerializer(serializers.ModelSerializer):
+    entry = EntrySerializer(many=False, read_only=True)
+
     class Meta:
         model = Like
         fields = '__all__'

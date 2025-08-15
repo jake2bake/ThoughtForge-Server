@@ -5,10 +5,13 @@ from django.http import HttpResponseServerError
 from thoughtsapi.models import Entry
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.decorators import action  
-from thoughtsapi.models import Tag
+from thoughtsapi.models import Tag, Topic
 from django.db.models import Q
 
-
+class TopicSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Topic
+        fields = ['id', 'label']
 
 
 class TagSerializer(serializers.ModelSerializer):
@@ -17,6 +20,9 @@ class TagSerializer(serializers.ModelSerializer):
         fields = ('id', 'name')
 
 class EntrySerializer(serializers.ModelSerializer):
+        topic = TopicSerializer(many=False, read_only=True)
+        topic_id = serializers.PrimaryKeyRelatedField(
+        queryset=Topic.objects.all(), write_only=True, source='topic')
         tags = TagSerializer(many=True, read_only=True)
         tag_ids = serializers.ListField(
             child=serializers.IntegerField(), write_only=True, required=False
@@ -24,7 +30,7 @@ class EntrySerializer(serializers.ModelSerializer):
 
         class Meta:
             model = Entry
-            fields = ('id', 'user', 'title', 'reflection', 'created_at', 'updated_at', 'isPrivate', 'topic', 'tags', 'tag_ids')
+            fields = ('id', 'user', 'title', 'reflection', 'created_at', 'updated_at', 'isPrivate', 'topic', 'topic_id', 'tags', 'tag_ids')
             depth = 1
 
         def create(self, validated_data):
