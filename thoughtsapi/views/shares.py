@@ -1,12 +1,24 @@
 from rest_framework import viewsets, serializers, status
 from rest_framework.response import Response
-from thoughtsapi.models import Share
+from thoughtsapi.models import Share, Entry, Reading, Course
+
+class CourseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Course
+        fields = '__all__'
+
+class EntrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Entry
+        fields = '__all__'
 
 # Serializer
 class ShareSerializer(serializers.ModelSerializer):
+    entry_details = EntrySerializer(source='entry', many=False, read_only=True)
+    course_details = CourseSerializer(source='course', many=False, read_only=True)
     class Meta:
         model = Share
-        fields = '__all__'
+        fields = ['id', 'user', 'entry', 'shared_to', 'course', 'entry_details', 'course_details', 'created_at']
 
 # ViewSet
 class ShareViewSet(viewsets.ViewSet):
