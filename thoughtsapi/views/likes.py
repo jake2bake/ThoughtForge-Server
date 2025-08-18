@@ -10,11 +10,11 @@ class EntrySerializer(serializers.ModelSerializer):
 
 # Serializer
 class LikeSerializer(serializers.ModelSerializer):
-    entry = EntrySerializer(many=False, read_only=True)
+    entry_details = EntrySerializer(source='entry', many=False, read_only=True)
 
     class Meta:
         model = Like
-        fields = '__all__'
+        fields = ['id', 'user', 'entry', 'created_at', 'entry_details']
 
 # ViewSet
 class LikeViewSet(viewsets.ViewSet):
