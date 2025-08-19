@@ -2,6 +2,11 @@ from rest_framework import viewsets, serializers, status
 from rest_framework.response import Response
 from thoughtsapi.models import Share, Entry, Reading, Course
 
+class ReadingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reading
+        fields = ['id', 'title', 'author']
+
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
@@ -16,9 +21,10 @@ class EntrySerializer(serializers.ModelSerializer):
 class ShareSerializer(serializers.ModelSerializer):
     entry_details = EntrySerializer(source='entry', many=False, read_only=True)
     course_details = CourseSerializer(source='course', many=False, read_only=True)
+    reading_details = ReadingSerializer(source='reading', many=False, read_only=True)
     class Meta:
         model = Share
-        fields = ['id', 'user', 'entry', 'shared_to', 'course', 'entry_details', 'course_details', 'created_at']
+        fields = ['id', 'user', 'entry', 'shared_to', 'course', 'entry_details', 'course_details', 'reading_details', 'reading', 'created_at']
 
 # ViewSet
 class ShareViewSet(viewsets.ViewSet):
