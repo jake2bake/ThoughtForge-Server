@@ -3,7 +3,13 @@
 from rest_framework import viewsets, serializers
 from rest_framework.response import Response
 from rest_framework import status
-from thoughtsapi.models import Course, User, ReadingAssignment
+from thoughtsapi.models import Course, User, ReadingAssignment, CourseEnrollment
+
+
+class CourseEnrollmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CourseEnrollment
+        fields = '__all__'
 
 class ReadingAssignmentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,6 +24,7 @@ class UserSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     mentor = UserSerializer()
     reading_assignments = ReadingAssignmentSerializer(many=True, read_only=True)
+    course_enrollments = CourseEnrollmentSerializer(many=True, read_only=True)
     class Meta:
         model = Course
         fields = '__all__'
