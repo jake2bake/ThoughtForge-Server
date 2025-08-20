@@ -6,7 +6,13 @@ from thoughtsapi.models import Submission
 class SubmissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Submission
-        fields = '__all__'
+        fields = ['id', 'title', 'reflection', 'user', 'reading', 'submitted_at', 'grade', 'feedback']
+        read_only_fields = ['submitted_att']
+        extra_kwargs = {
+            'grade': {'required': False},
+            'feedback': {'required': False}
+        }
+
 
 # ViewSet
 class SubmissionViewSet(viewsets.ViewSet):

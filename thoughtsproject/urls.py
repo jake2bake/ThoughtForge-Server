@@ -29,6 +29,6 @@ urlpatterns = [
     path('login', login_user, name='login'),
     path("profile/", profile_view, name='profile'),
     path('gutendex/books/<int:gutenberg_id>/', gutendex_proxy, name='gutendex-proxy'),
-    path('gutendex/books/search/', gutendex_search, name='gutendex-search'),
+    path('gutendex/books', gutendex_search, name='gutendex-search'),
     path('gutendex/text/', gutendex_text_proxy, name='gutendex-text-proxy')
 ]
