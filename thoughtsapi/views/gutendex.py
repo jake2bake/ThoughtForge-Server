@@ -16,15 +16,25 @@ def gutendex_proxy(request, gutenberg_id):
 
 @api_view(['GET'])
 def gutendex_search(request):
-    query = request.GET.get("q", "").strip()
-    gutendex_url = f"https://gutendex.com/books?search={query}"
-    try:
-        res = requests.get(gutendex_url, timeout=10)
-        res.raise_for_status()
-    except requests.RequestException as e:
-        return Response({"error": str(e)}, status=status.HTTP_502_BAD_GATEWAY)
+    query = request.GET.get("q", "").strip()  
+    if not query:
+        return Response(
+            {'error': 'No search query provided'}, 
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
-    return Response(res.json())
+    gutendex_url = f"https://gutendex.com/books"  
+    params = {'search': query}  
+
+    try:
+        res = requests.get(gutendex_url, params=params, timeout=15)
+        res.raise_for_status()
+        return Response(res.json())
+    except requests.RequestException as e:
+        return Response(
+            {'error': f"Error fetching from Gutendex: {str(e)}"}, 
+            status=status.HTTP_502_BAD_GATEWAY
+        )
 
 @api_view(['GET'])
 def gutendex_text_proxy(request):
